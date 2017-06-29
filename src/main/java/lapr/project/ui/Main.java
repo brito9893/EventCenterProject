@@ -15,6 +15,7 @@ class Main {
     public static void main(String[] args) {
         EventCenter ec = new EventCenter();
 
+
         new LoginUI(ec);
     }
 
