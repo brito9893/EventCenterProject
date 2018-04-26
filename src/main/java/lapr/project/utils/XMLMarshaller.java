@@ -5,13 +5,19 @@
  */
 package lapr.project.utils;
 
-import lapr.project.model.*;
-
-import javax.xml.bind.*;
-import java.io.*;
-import java.nio.file.*;
-import java.util.*;
-import java.util.logging.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.StringReader;
+import java.io.StringWriter;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
+import lapr.project.model.EventCenter;
 
 /**
  * @author U
@@ -54,7 +60,7 @@ public class XMLMarshaller {
         }
     }
 
-    private static String fileToString(File file) throws FileNotFoundException {
+    private static String fileToString(File file) {
         StringBuilder build = new StringBuilder();
         try (Scanner scan = new Scanner(file)) {
             while (scan.hasNextLine()) {

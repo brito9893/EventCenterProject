@@ -1,9 +1,10 @@
 package lapr.project.controller;
 
+import java.util.List;
 import lapr.project.model.*;
-import lapr.project.model.registers.*;
-
-import java.util.*;
+import lapr.project.model.registers.EventRegister;
+import lapr.project.model.registers.FAEList;
+import lapr.project.model.registers.UserRegister;
 
 /**
  * Define FAE Controller

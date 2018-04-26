@@ -6,12 +6,10 @@ package lapr.project.model;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-
-import lapr.project.model.registers.*;
-import lapr.project.utils.Date.Date;
-
 import java.util.List;
 import javax.xml.bind.annotation.XmlElement;
+import lapr.project.model.registers.*;
+import lapr.project.utils.Date.Date;
 
 /**
  * @author Luís Cunha on 02/06/2017

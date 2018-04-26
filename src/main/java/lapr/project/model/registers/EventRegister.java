@@ -1,10 +1,13 @@
 package lapr.project.model.registers;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
 import lapr.project.model.*;
 import lapr.project.utils.Date.Date;
-
-import javax.xml.bind.annotation.*;
-import java.util.*;
 
 /**
  * Event registry Created by vitor on 03/06/2017.

@@ -1,15 +1,17 @@
 package lapr.project.ui;
 
-import com.toedter.calendar.*;
-import lapr.project.controller.*;
-import lapr.project.model.*;
-
-import javax.swing.*;
-import javax.swing.border.*;
+import com.toedter.calendar.JDateChooser;
 import java.awt.*;
-import java.awt.event.*;
-import java.text.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.text.SimpleDateFormat;
 import java.util.List;
+import javax.swing.*;
+import javax.swing.border.TitledBorder;
+import lapr.project.controller.CreateEventController;
+import lapr.project.model.EventCenter;
 
 /**
  * Graphical user interface for Use Case 1

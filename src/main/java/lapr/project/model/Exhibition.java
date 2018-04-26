@@ -5,10 +5,9 @@
  */
 package lapr.project.model;
 
-import lapr.project.utils.Date.Date;
-
 import java.util.List;
 import javax.xml.bind.annotation.XmlRootElement;
+import lapr.project.utils.Date.Date;
 
 /**
  * @author U

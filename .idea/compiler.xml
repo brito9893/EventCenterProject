@@ -9,8 +9,5 @@
         <module name="expo" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="expo" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

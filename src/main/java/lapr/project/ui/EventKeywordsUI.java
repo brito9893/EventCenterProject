@@ -5,25 +5,16 @@
  */
 package lapr.project.ui;
 
-import java.awt.BorderLayout;
-import java.awt.FlowLayout;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import javax.swing.DefaultComboBoxModel;
-import javax.swing.JComboBox;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
-import javax.swing.RowSorter;
-import javax.swing.SortOrder;
+import javax.swing.*;
 import javax.swing.event.PopupMenuEvent;
 import javax.swing.event.PopupMenuListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
-
 import lapr.project.controller.ShowSubmissionKeywordsController;
 import lapr.project.model.EventCenter;
 

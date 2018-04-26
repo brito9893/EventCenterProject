@@ -1,14 +1,14 @@
 package lapr.project.ui;
 
-import lapr.project.controller.*;
-import lapr.project.model.*;
-
-import javax.swing.*;
-import javax.swing.border.*;
-import javax.swing.text.*;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.util.List;
+import javax.swing.*;
+import javax.swing.border.TitledBorder;
+import javax.swing.text.DefaultFormatter;
+import lapr.project.controller.CreateStandController;
+import lapr.project.model.EventCenter;
 
 class CreateStandUI extends JPanel {
 

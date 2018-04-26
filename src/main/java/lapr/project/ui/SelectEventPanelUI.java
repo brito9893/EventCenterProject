@@ -1,8 +1,8 @@
 package lapr.project.ui;
 
+import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
-import java.awt.*;
 
 /**
  * Created by Mário Vaz on 21-Jun-17.

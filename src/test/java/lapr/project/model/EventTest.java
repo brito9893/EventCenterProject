@@ -1,20 +1,15 @@
 package lapr.project.model;
 
+import java.util.ArrayList;
+import java.util.List;
+import lapr.project.model.registers.ApplicationList;
 import lapr.project.model.registers.FAEList;
 import lapr.project.model.registers.OrganizerRegister;
+import lapr.project.model.registers.StandList;
 import lapr.project.utils.Date.Date;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import lapr.project.model.registers.ApplicationList;
-import lapr.project.model.registers.StandList;
-
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 
 /**

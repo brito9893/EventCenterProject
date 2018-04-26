@@ -1,9 +1,13 @@
 package lapr.project.controller;
 
-import lapr.project.model.*;
-import lapr.project.model.registers.*;
-
-import java.util.*;
+import java.util.List;
+import lapr.project.model.Application;
+import lapr.project.model.Event;
+import lapr.project.model.EventCenter;
+import lapr.project.model.Keyword;
+import lapr.project.model.registers.ApplicationList;
+import lapr.project.model.registers.EventRegister;
+import lapr.project.model.registers.KeywordList;
 
 /**
  * Get Events And Applications Controller

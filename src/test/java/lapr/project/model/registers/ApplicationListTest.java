@@ -1,9 +1,10 @@
 package lapr.project.model.registers;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 import lapr.project.model.*;
-import org.junit.*;
-
-import java.util.*;
+import org.junit.Test;
 
 import static org.junit.Assert.*;
 

@@ -1,6 +1,6 @@
 package lapr.project.controller;
 
-import lapr.project.model.*;
+import lapr.project.model.EventCenter;
 
 /**
  * Global mean rating controller

@@ -1,21 +1,10 @@
 package lapr.project.model.registers;
 
-import lapr.project.model.Application;
-import lapr.project.model.Representative;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
-
-import lapr.project.model.Decision;
-import lapr.project.model.FAE;
-
-import lapr.project.model.Keyword;
+import lapr.project.model.*;
 
 /**
  * Application Registry
@@ -164,7 +153,7 @@ public class ApplicationList {
                 keyStringMap.replace(key, ++count);
             }
         });
-        keyStringMap.keySet().forEach(k -> keyStringMap.replace(k, (double) keyStringMap.get(k) / (double) keywords.size()));
+        keyStringMap.keySet().forEach(k -> keyStringMap.replace(k, keyStringMap.get(k) / (double) keywords.size()));
 
         return keyStringMap;
     }

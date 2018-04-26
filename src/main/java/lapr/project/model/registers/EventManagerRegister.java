@@ -10,7 +10,6 @@ import java.util.List;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
-
 import lapr.project.model.EventManager;
 import lapr.project.model.User;
 

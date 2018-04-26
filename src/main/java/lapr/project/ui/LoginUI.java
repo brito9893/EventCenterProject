@@ -5,14 +5,15 @@
  */
 package lapr.project.ui;
 
-import lapr.project.model.*;
-import lapr.project.utils.*;
-
-import javax.swing.*;
-import javax.swing.filechooser.*;
 import java.awt.*;
-import java.awt.event.*;
-import java.io.*;
+import java.awt.event.ActionEvent;
+import java.io.File;
+import java.io.FileNotFoundException;
+import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
+import lapr.project.model.EventCenter;
+import lapr.project.model.User;
+import lapr.project.utils.XMLMarshaller;
 
 /**
  * Login User Interface

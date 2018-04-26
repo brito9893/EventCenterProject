@@ -1,8 +1,9 @@
 package lapr.project.model;
 
 
-import javax.xml.bind.annotation.*;
-import java.util.*;
+import java.util.Objects;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * Represents an event organizer

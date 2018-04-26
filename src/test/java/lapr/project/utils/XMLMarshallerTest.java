@@ -5,12 +5,11 @@
  */
 package lapr.project.utils;
 
-import lapr.project.model.*;
-import org.junit.*;
+import java.io.File;
+import lapr.project.model.EventCenter;
+import org.junit.Test;
 
-import java.io.*;
-
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * @author U

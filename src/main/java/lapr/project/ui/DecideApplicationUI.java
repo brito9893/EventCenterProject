@@ -1,15 +1,16 @@
 package lapr.project.ui;
 
-import lapr.project.controller.*;
-import lapr.project.model.*;
-
-import javax.swing.*;
-import javax.swing.border.*;
-import javax.swing.text.*;
 import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.util.ArrayList;
 import java.util.List;
+import javax.swing.*;
+import javax.swing.border.TitledBorder;
+import javax.swing.text.DefaultFormatter;
+import lapr.project.controller.DecideApplicationController;
+import lapr.project.model.EventCenter;
+import lapr.project.model.FAE;
 
 /**
  * Decide Application UI

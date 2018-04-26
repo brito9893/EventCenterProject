@@ -1,9 +1,10 @@
 package lapr.project.model;
 
 
-import org.junit.*;
+import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 /**
  * Example of a domain class that is used in Candidatura.

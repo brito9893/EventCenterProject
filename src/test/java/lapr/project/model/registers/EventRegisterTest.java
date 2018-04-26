@@ -1,12 +1,10 @@
 package lapr.project.model.registers;
 
+import java.util.ArrayList;
+import java.util.List;
 import lapr.project.model.*;
 import lapr.project.utils.Date.Date;
 import org.junit.Test;
-
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.List;
 
 import static org.junit.Assert.*;
 

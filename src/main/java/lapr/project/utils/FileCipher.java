@@ -5,8 +5,11 @@
  */
 package lapr.project.utils;
 
-import java.util.*;
-import java.util.logging.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 

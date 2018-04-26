@@ -5,10 +5,10 @@
  */
 package lapr.project.model;
 
+import java.util.ArrayList;
+import java.util.List;
 import lapr.project.utils.Date.Date;
-import org.junit.*;
-
-import java.util.*;
+import org.junit.Test;
 
 /**
  * @author U

@@ -5,9 +5,7 @@ import java.util.UUID;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlRootElement;
-
 import lapr.project.utils.FileCipher;
-
 import lapr.project.utils.PasswordEncoder;
 
 /**

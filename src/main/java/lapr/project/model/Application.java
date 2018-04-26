@@ -1,9 +1,10 @@
 package lapr.project.model;
 
-import lapr.project.model.registers.*;
-
-import javax.xml.bind.annotation.*;
-import java.util.*;
+import java.util.Objects;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import lapr.project.model.registers.DecisionList;
+import lapr.project.model.registers.KeywordList;
 
 /**
  * Application class.

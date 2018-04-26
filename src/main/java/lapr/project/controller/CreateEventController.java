@@ -1,10 +1,11 @@
 package lapr.project.controller;
 
+import java.util.ArrayList;
+import java.util.List;
 import lapr.project.model.*;
-import lapr.project.model.registers.*;
+import lapr.project.model.registers.EventRegister;
+import lapr.project.model.registers.UserRegister;
 import lapr.project.utils.Date.Date;
-
-import java.util.*;
 
 /**
  * Create Event Controller

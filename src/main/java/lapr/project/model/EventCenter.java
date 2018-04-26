@@ -9,7 +9,6 @@ package lapr.project.model;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
-
 import lapr.project.model.registers.EventManagerRegister;
 import lapr.project.model.registers.EventRegister;
 import lapr.project.model.registers.UserNotConfirmedRegister;

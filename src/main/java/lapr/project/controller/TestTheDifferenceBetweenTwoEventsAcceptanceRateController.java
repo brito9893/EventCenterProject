@@ -1,10 +1,11 @@
 package lapr.project.controller;
 
-import lapr.project.model.*;
-import lapr.project.model.registers.*;
-import lapr.project.utils.*;
-
-import java.util.*;
+import java.util.List;
+import lapr.project.model.Application;
+import lapr.project.model.Event;
+import lapr.project.model.EventCenter;
+import lapr.project.model.registers.EventRegister;
+import lapr.project.utils.Statistics;
 
 /**
  * Controller for Test The Difference Between Two Events Acceptance Rate Use Case

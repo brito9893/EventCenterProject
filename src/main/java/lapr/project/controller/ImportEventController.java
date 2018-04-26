@@ -5,15 +5,17 @@
  */
 package lapr.project.controller;
 
-import lapr.project.model.*;
-import lapr.project.model.registers.*;
-import lapr.project.utils.Date.Date;
-import lapr.project.utils.*;
-
-import java.io.*;
-import java.util.*;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import lapr.project.model.*;
+import lapr.project.model.registers.EventRegister;
+import lapr.project.model.registers.StandList;
+import lapr.project.model.registers.UserRegister;
+import lapr.project.utils.Date.Date;
+import lapr.project.utils.XMLReader;
 
 /**
  * Import Event Controller

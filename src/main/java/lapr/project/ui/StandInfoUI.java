@@ -5,13 +5,9 @@
  */
 package lapr.project.ui;
 
-import java.awt.BorderLayout;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
+import java.awt.*;
+import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-
 import lapr.project.controller.ShowStandInfoController;
 
 /**

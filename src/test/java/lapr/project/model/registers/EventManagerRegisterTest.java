@@ -5,8 +5,9 @@
  */
 package lapr.project.model.registers;
 
-import lapr.project.model.*;
-import org.junit.*;
+import lapr.project.model.EventManager;
+import lapr.project.model.User;
+import org.junit.Test;
 
 import static org.junit.Assert.*;
 

@@ -5,9 +5,10 @@
  */
 package lapr.project.model;
 
-import org.junit.*;
+import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 /**
  * Unit Test for the FAE Class.

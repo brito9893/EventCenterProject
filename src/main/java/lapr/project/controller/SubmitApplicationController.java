@@ -1,9 +1,11 @@
 package lapr.project.controller;
 
+import java.util.ArrayList;
+import java.util.List;
 import lapr.project.model.*;
-import lapr.project.model.registers.*;
-
-import java.util.*;
+import lapr.project.model.registers.ApplicationList;
+import lapr.project.model.registers.EventRegister;
+import lapr.project.model.registers.KeywordList;
 
 /**
  * Submit application controller

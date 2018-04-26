@@ -5,12 +5,14 @@
  */
 package lapr.project.ui;
 
-import lapr.project.controller.*;
-import lapr.project.model.*;
-
-import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.FocusEvent;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionListener;
+import javax.swing.*;
+import lapr.project.controller.UserRegisterController;
+import lapr.project.model.EventCenter;
+import lapr.project.model.User;
 
 /**
  * @author Luis Cunha on 06/06/2017

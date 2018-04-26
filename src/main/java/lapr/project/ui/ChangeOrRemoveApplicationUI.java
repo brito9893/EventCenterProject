@@ -1,12 +1,11 @@
 package lapr.project.ui;
 
-import lapr.project.controller.*;
-import lapr.project.model.*;
-
-import javax.swing.*;
-import javax.swing.border.*;
 import java.awt.*;
 import java.util.List;
+import javax.swing.*;
+import javax.swing.border.TitledBorder;
+import lapr.project.controller.ChangeOrRemoveApplicationController;
+import lapr.project.model.EventCenter;
 
 /**
  * Created by vitor on 07/06/2017.

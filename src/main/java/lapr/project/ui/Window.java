@@ -1,18 +1,21 @@
 package lapr.project.ui;
 
 import com.toedter.calendar.JDateChooser;
-import lapr.project.controller.*;
-import lapr.project.model.*;
-
-import javax.swing.*;
-import javax.swing.filechooser.*;
-import javax.swing.table.*;
 import java.awt.*;
-import java.awt.event.*;
-import java.io.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.List;
-
+import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.table.DefaultTableModel;
+import lapr.project.controller.*;
+import lapr.project.model.EventCenter;
+import lapr.project.model.FAE;
+import lapr.project.model.User;
 import lapr.project.utils.Date.Date;
 
 /**

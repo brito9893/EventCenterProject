@@ -1,10 +1,9 @@
 package lapr.project.ui;
 
+import java.awt.*;
+import javax.swing.*;
 import lapr.project.controller.AssignStandToApplicationController;
 import lapr.project.controller.DecideApplicationController;
-
-import javax.swing.*;
-import java.awt.*;
 
 /**
  * Created by Mário Vaz on 21-Jun-17.

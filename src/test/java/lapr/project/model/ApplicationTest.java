@@ -1,10 +1,11 @@
 package lapr.project.model;
 
 
-import lapr.project.model.registers.*;
-import org.junit.*;
-
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import lapr.project.model.registers.DecisionList;
+import lapr.project.model.registers.KeywordList;
+import org.junit.Test;
 
 import static org.junit.Assert.*;
 

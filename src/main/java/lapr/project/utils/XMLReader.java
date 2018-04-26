@@ -5,13 +5,19 @@
  */
 package lapr.project.utils;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 import lapr.project.model.*;
-import lapr.project.model.registers.*;
-import org.w3c.dom.*;
-
-import javax.xml.parsers.*;
-import java.io.*;
-import java.util.*;
+import lapr.project.model.registers.DecisionList;
+import lapr.project.model.registers.KeywordList;
+import lapr.project.model.registers.StandList;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
 /**
  * @author Luís Cunha on 13/06/2017

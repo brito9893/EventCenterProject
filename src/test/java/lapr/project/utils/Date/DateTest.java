@@ -1,12 +1,13 @@
 package lapr.project.utils.Date;
 
-import org.junit.*;
-
-import java.util.*;
+import java.util.Calendar;
+import org.junit.Assert;
+import org.junit.Test;
 
 import static lapr.project.utils.Date.Date.Month.*;
 import static lapr.project.utils.Date.Date.WeekDay.*;
-import static lapr.project.utils.Date.Date.*;
+import static lapr.project.utils.Date.Date.currentDate;
+import static lapr.project.utils.Date.Date.isLeapYear;
 import static org.junit.Assert.*;
 
 /**

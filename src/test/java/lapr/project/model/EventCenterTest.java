@@ -5,10 +5,14 @@
  */
 package lapr.project.model;
 
-import lapr.project.model.registers.*;
-import org.junit.*;
+import lapr.project.model.registers.EventManagerRegister;
+import lapr.project.model.registers.EventRegister;
+import lapr.project.model.registers.UserNotConfirmedRegister;
+import lapr.project.model.registers.UserRegister;
+import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 /**
  * @author Luis Cunha 06/06/2017

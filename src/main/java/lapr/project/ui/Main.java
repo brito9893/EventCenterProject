@@ -1,7 +1,7 @@
 package lapr.project.ui;
 
 
-import lapr.project.model.*;
+import lapr.project.model.EventCenter;
 
 
 /**

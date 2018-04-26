@@ -1,13 +1,12 @@
 package lapr.project.model.registers;
 
-import lapr.project.model.Stand;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
+import lapr.project.model.Stand;
 
 /**
  * Created by Mário Vaz on 05-Jun-17.

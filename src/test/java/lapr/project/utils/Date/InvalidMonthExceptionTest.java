@@ -1,8 +1,8 @@
 package lapr.project.utils.Date;
 
-import org.junit.*;
+import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Unit testing for InvalidMonthException class

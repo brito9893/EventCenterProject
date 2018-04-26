@@ -8,22 +8,14 @@ package lapr.project.utils;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-
-import lapr.project.model.Application;
-import lapr.project.model.Decision;
-import lapr.project.model.FAE;
-import lapr.project.model.Keyword;
-import lapr.project.model.Representative;
-import lapr.project.model.Stand;
-import lapr.project.model.User;
+import lapr.project.model.*;
 import lapr.project.model.registers.DecisionList;
 import lapr.project.model.registers.KeywordList;
 import lapr.project.model.registers.StandList;
+import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-
-import org.junit.Test;
 
 /**
  * @author U

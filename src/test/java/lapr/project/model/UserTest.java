@@ -5,8 +5,8 @@
  */
 package lapr.project.model;
 
-import lapr.project.model.User.*;
-import org.junit.*;
+import lapr.project.model.User.Language;
+import org.junit.Test;
 
 import static org.junit.Assert.*;
 

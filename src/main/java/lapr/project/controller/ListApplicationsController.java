@@ -1,9 +1,10 @@
 package lapr.project.controller;
 
-import lapr.project.model.*;
-import lapr.project.model.registers.*;
-
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import lapr.project.model.Event;
+import lapr.project.model.EventCenter;
+import lapr.project.model.registers.EventRegister;
 
 /**
  * List Applications Controller

@@ -5,16 +5,15 @@
  */
 package lapr.project.ui;
 
-import com.toedter.calendar.*;
-import lapr.project.controller.*;
-import lapr.project.model.*;
-
-import javax.swing.*;
-import javax.swing.border.*;
+import com.toedter.calendar.JDateChooser;
 import java.awt.*;
-import java.awt.event.*;
-import java.text.*;
+import java.awt.event.KeyEvent;
+import java.text.SimpleDateFormat;
 import java.util.List;
+import javax.swing.*;
+import javax.swing.border.TitledBorder;
+import lapr.project.controller.ImportEventController;
+import lapr.project.model.EventCenter;
 
 /**
  * @author U

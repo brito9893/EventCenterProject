@@ -1,11 +1,11 @@
 package lapr.project.ui;
 
-import lapr.project.controller.*;
-import lapr.project.model.*;
-
-import javax.swing.*;
 import java.awt.*;
 import java.util.List;
+import javax.swing.*;
+import lapr.project.controller.SubmitApplicationController;
+import lapr.project.model.EventCenter;
+import lapr.project.model.User;
 
 /**
  * Created by Mário Vaz on 08-Jun-17.

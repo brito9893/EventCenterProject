@@ -5,8 +5,8 @@
  */
 package lapr.project.ui;
 
-import javax.swing.*;
 import java.awt.*;
+import javax.swing.*;
 
 /**
  * @author U
