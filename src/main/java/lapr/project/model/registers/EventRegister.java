@@ -3,6 +3,9 @@ package lapr.project.model.registers;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -13,6 +16,7 @@ import lapr.project.utils.Date.Date;
  * Event registry Created by vitor on 03/06/2017.
  */
 @XmlRootElement
+@Entity
 public class EventRegister {
 
     /**
@@ -20,6 +24,7 @@ public class EventRegister {
      */
     @XmlElementWrapper(name = "Events")
     @XmlElement(name = "Event")
+    @OneToMany
     private ArrayList<Event> eventList;
 
     /**
@@ -153,27 +158,8 @@ public class EventRegister {
         return eventList.remove(event);
     }
 
-    public void updateEventsState(Date currentDate) {
-        for (Event e : eventList) {
-
-            if (e.getSubmissionStartDate().isBigger(currentDate) && e.getFaeList().getSize() > 0) {
-                e.setState(Event.NOT_STARTED_SUBMISSIONS);
-                return;
-            }
-            if (currentDate.isBigger(e.getSubmissionStartDate()) && e.getSubmissionEndDate().isBigger(currentDate)) {
-                e.setState(Event.STARTED_SUBMISSIONS);
-                return;
-            }
-            if (currentDate.isBigger(e.getSubmissionEndDate()) && e.getStartDate().isBigger(currentDate)) {
-                e.setState(Event.SUBMISSIONS_ON_DECISION);
-                return;
-            }
-            if (currentDate.isBigger(e.getStartDate())) {
-                e.setState(Event.STARTED);
-                return;
-            }
-        }
-    }
+    @Id
+    private String id;
 
     /**
      * Obtains List of Events.
@@ -325,5 +311,35 @@ public class EventRegister {
             }
         }
         return (counter == 0) ? 0 : average / counter;
+    }
+
+    public void updateEventsState(Date currentDate) {
+        for (Event e : eventList) {
+
+            if (e.getSubmissionStartDate().isBigger(currentDate) && e.getFaeList().size() > 0) {
+                e.setState(Event.NOT_STARTED_SUBMISSIONS);
+                return;
+            }
+            if (currentDate.isBigger(e.getSubmissionStartDate()) && e.getSubmissionEndDate().isBigger(currentDate)) {
+                e.setState(Event.STARTED_SUBMISSIONS);
+                return;
+            }
+            if (currentDate.isBigger(e.getSubmissionEndDate()) && e.getStartDate().isBigger(currentDate)) {
+                e.setState(Event.SUBMISSIONS_ON_DECISION);
+                return;
+            }
+            if (currentDate.isBigger(e.getStartDate())) {
+                e.setState(Event.STARTED);
+                return;
+            }
+        }
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

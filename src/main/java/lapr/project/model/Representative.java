@@ -1,6 +1,10 @@
 package lapr.project.model;
 
 import java.util.Objects;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -8,12 +12,14 @@ import javax.xml.bind.annotation.XmlRootElement;
  * Created by vitor and luis on 08/06/2017.
  */
 @XmlRootElement
+@Entity
 public class Representative {
 
     /**
      * User
      */
     @XmlElement
+    @OneToOne
     private User user;
 
     /**
@@ -74,5 +80,17 @@ public class Representative {
         int result = 11;
         result = 31 * result + user.hashCode();
         return result;
+    }
+
+    @Id
+    @GeneratedValue
+    private String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

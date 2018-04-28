@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
  */
 public class AttributionListTest {
     /**
-     * Test of getSize method, of class AttributionList.
+     * Test of size method, of class AttributionList.
      */
     @Test
     public void testGetSize() {

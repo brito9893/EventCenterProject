@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 public class KeywordListTest {
 
     /**
-     * Test of getSize method, of class KeywordList.
+     * Test of size method, of class KeywordList.
      */
     @Test
     public void testGetSize() {

@@ -7,6 +7,9 @@ package lapr.project.model.registers;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -19,6 +22,7 @@ import lapr.project.model.User.Language;
  * @author Luís Cunha on 02/06/2017
  */
 @XmlRootElement
+@Entity
 public class UserNotConfirmedRegister {
 
     /**
@@ -26,7 +30,8 @@ public class UserNotConfirmedRegister {
      */
     @XmlElementWrapper(name = "UnConfirmedUsers")
     @XmlElement(name = "User")
-    private final ArrayList<User> usersNotConfirmedList;
+    @OneToMany
+    private final List<User> usersNotConfirmedList;
 
     /**
      * UserNotConfirmedRegister Class Constructor
@@ -136,4 +141,14 @@ public class UserNotConfirmedRegister {
         return true;
     }
 
+    @Id
+    private String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 }

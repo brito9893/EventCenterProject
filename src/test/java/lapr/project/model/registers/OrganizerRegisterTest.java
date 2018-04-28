@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
 public class OrganizerRegisterTest {
 
     /**
-     * Test of getSize method, of class OrganizerRegister.
+     * Test of size method, of class OrganizerRegister.
      */
     @Test
     public void testGetSize() {

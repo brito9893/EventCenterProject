@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 public class UserRegisterTest {
 
     /**
-     * Test of getSize method, of class UserRegister.
+     * Test of size method, of class UserRegister.
      */
     @Test
     public void testGetSize() {

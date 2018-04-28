@@ -10,6 +10,8 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -17,6 +19,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author Luís Cunha
  */
 @XmlRootElement
+@Entity
 public class FileCipher {
 
     private static final String EMPTY = "";
@@ -204,5 +207,16 @@ public class FileCipher {
             ctext++;
         }
         return new String(decrypted);
+    }
+
+    private String id;
+
+    @Id
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

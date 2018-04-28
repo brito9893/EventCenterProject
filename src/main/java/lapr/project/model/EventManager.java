@@ -6,6 +6,9 @@
 package lapr.project.model;
 
 import java.util.Objects;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -13,12 +16,14 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author Luis Cunha on 16/06/2017
  */
 @XmlRootElement
+@Entity
 public class EventManager {
 
     /**
      * User
      */
     @XmlElement
+    @OneToOne
     private User user;
 
     /**
@@ -79,4 +84,14 @@ public class EventManager {
         return hash;
     }
 
+    @Id
+    private String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 }

@@ -1,5 +1,7 @@
 package lapr.project.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -7,6 +9,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author Mário Vaz
  */
 @XmlRootElement
+@Entity
 public class Stand {
     /**
      * Stand identification number
@@ -117,5 +120,16 @@ public class Stand {
         int result = area;
         result = 31 * result + standDescription.hashCode();
         return result;
+    }
+
+    @Id
+    private String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

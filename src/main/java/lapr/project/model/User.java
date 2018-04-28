@@ -1,7 +1,9 @@
 package lapr.project.model;
 
+import java.io.Serializable;
 import java.util.Objects;
 import java.util.UUID;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -14,7 +16,22 @@ import lapr.project.utils.PasswordEncoder;
  * @author Luís Cunha on 01/06/2017
  */
 @XmlRootElement
-public class User {
+@Entity
+public class User implements Serializable {
+    private static final long serialVersionUID = -642375789393957775L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private String id;
+    /**
+     * FileCipher for encryption.
+     */
+    @XmlElement(name = "key")
+    @OneToOne
+    private FileCipher encrypter;
+
+    public String getId() {
+        return id;
+    }
 
     /**
      * User default language
@@ -45,11 +62,11 @@ public class User {
      */
     @XmlElement
     private Language language;
-    /**
-     * FileCipher for encryption.
-     */
-    @XmlElement(name = "key")
-    private FileCipher encrypter;
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
 
     /**
      * User Class Constructor with individual parameters.
@@ -193,6 +210,7 @@ public class User {
 
         private final String languageString;
 
+
         Language(String languageString) {
             this.languageString = languageString;
         }
@@ -201,7 +219,6 @@ public class User {
         public String toString() {
             return languageString;
         }
+
     }
-
-
 }

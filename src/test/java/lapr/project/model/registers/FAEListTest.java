@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
  */
 public class FAEListTest {
     /**
-     * Test of getSize method, of class FAEList.
+     * Test of size method, of class FAEList.
      */
     @Test
     public void testGetSize() {
@@ -25,7 +25,7 @@ public class FAEListTest {
         listTest.addFAE(fae);
 
         int expected = 1;
-        int result = listTest.getSize();
+        int result = listTest.size();
 
         assertEquals(expected, result);
 
@@ -52,7 +52,7 @@ public class FAEListTest {
         assertTrue(listTest.addFAE(fae));
         assertFalse(listTest.addFAE(fae));
         int expected = 1;
-        assertEquals(expected, listTest.getSize());
+        assertEquals(expected, listTest.size());
     }
 
     /**
@@ -69,7 +69,7 @@ public class FAEListTest {
         assertTrue(listTest.removeFAE(fae));
         assertFalse(listTest.removeFAE(fae));
         int expected = 1;
-        int result = listTest.getSize();
+        int result = listTest.size();
         assertEquals(expected, result);
         assertTrue(listTest.getFAEsList().contains(fae1));
 
@@ -88,7 +88,7 @@ public class FAEListTest {
         listTest.addFAE(fae1);
 
         int expected = 2;
-        int result = listTest.getSize();
+        int result = listTest.size();
         assertEquals(expected, result);
         assertTrue(listTest.getFAEsList().contains(fae));
         assertTrue(listTest.getFAEsList().contains(fae1));
@@ -179,8 +179,8 @@ public class FAEListTest {
         test1.addFAE(fae1);
         test2.addFAE(fae1);
         test2.addFAE(fae0);
-        int result = test1.getSize();
-        int expected = test2.getSize();
+        int result = test1.size();
+        int expected = test2.size();
 
         assertEquals(expected, result);
         assertArrayEquals(test1.getFAEsList().toArray(), test1.getFAEsList().toArray());

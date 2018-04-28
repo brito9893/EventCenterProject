@@ -1,7 +1,9 @@
 package lapr.project.model;
 
 
+import java.io.Serializable;
 import java.util.Objects;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -11,8 +13,10 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author Luis Cunha on 01/06/2017
  */
 @XmlRootElement
-public class FAE {
+@Entity
+public class FAE implements Serializable {
 
+    private static final long serialVersionUID = 4207992249285182060L;
     /**
      * FAE user
      */
@@ -34,14 +38,9 @@ public class FAE {
         this.user = user;
     }
 
-    /**
-     * Returns User
-     *
-     * @return user
-     */
-    public User getUser() {
-        return user;
-    }
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
 
     /**
      * This method compares the equality of the current object with the object of same type.
@@ -74,5 +73,23 @@ public class FAE {
         int hash = 5;
         hash = 37 * hash + Objects.hashCode(this.user);
         return hash;
+    }
+
+    /**
+     * Returns User
+     *
+     * @return user
+     */
+    @OneToOne
+    public User getUser() {
+        return user;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 }

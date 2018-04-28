@@ -2,6 +2,9 @@ package lapr.project.model;
 
 
 import java.util.Objects;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -11,12 +14,14 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author Luís Cunha on 01/06/2017
  */
 @XmlRootElement
+@Entity
 public class Organizer {
 
     /**
      * Organizer's user
      */
     @XmlElement
+    @OneToOne
     private User user;
 
     /**
@@ -75,5 +80,16 @@ public class Organizer {
         int hash = 7;
         hash = 31 * hash + Objects.hashCode(this.user);
         return hash;
+    }
+
+    @Id
+    private String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

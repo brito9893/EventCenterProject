@@ -2,6 +2,7 @@ package lapr.project.utils.Date;
 
 import java.util.Calendar;
 import java.util.Objects;
+import javax.persistence.Embeddable;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -11,8 +12,8 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author ISEP-DEI-PPROG
  */
 @XmlRootElement
+@Embeddable
 public class Date implements Comparable<Date> {
-
 
     /**
      * Year by omission.
@@ -124,6 +125,18 @@ public class Date implements Comparable<Date> {
      */
     public int getDay() {
         return day;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public void setMonth(Month month) {
+        this.month = month;
+    }
+
+    public void setDay(int day) {
+        this.day = day;
     }
 
     /**

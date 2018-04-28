@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
 public class ApplicationListTest {
 
     /**
-     * Test of getSize method, of class ApplicationList.
+     * Test of size method, of class ApplicationList.
      */
     @Test
     public void testGetSize() {

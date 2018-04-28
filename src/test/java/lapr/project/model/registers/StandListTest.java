@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
  */
 public class StandListTest {
     /**
-     * Test of getSize method, of class StandList.
+     * Test of size method, of class StandList.
      */
     @Test
     public void testGetSize() {

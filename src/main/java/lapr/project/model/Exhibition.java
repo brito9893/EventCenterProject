@@ -6,6 +6,7 @@
 package lapr.project.model;
 
 import java.util.List;
+import javax.persistence.Embeddable;
 import javax.xml.bind.annotation.XmlRootElement;
 import lapr.project.utils.Date.Date;
 
@@ -13,6 +14,7 @@ import lapr.project.utils.Date.Date;
  * @author U
  */
 @XmlRootElement
+@Embeddable
 public class Exhibition extends Event {
 
     /**

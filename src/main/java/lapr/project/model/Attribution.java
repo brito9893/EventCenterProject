@@ -2,6 +2,9 @@ package lapr.project.model;
 
 
 import java.util.Objects;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -9,18 +12,21 @@ import javax.xml.bind.annotation.XmlRootElement;
  * Created by Mário Vaz
  */
 @XmlRootElement
+@Entity
 public class Attribution {
 
     /**
      * FAE of the Attribution.
      */
     @XmlElement
+    @OneToOne
     private FAE fae;
 
     /**
      * Application of the Attribution.
      */
     @XmlElement
+    @OneToOne
     private Application application;
 
     /**
@@ -91,5 +97,16 @@ public class Attribution {
         }
         final Attribution other = (Attribution) obj;
         return Objects.equals(this.fae, other.fae) && Objects.equals(this.application, other.application);
+    }
+
+    @Id
+    private String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

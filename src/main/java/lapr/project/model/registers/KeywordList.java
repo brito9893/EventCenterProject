@@ -2,6 +2,7 @@ package lapr.project.model.registers;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.Embeddable;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -11,6 +12,7 @@ import lapr.project.model.Keyword;
  * Created by Mário Vaz on 06-Jun-17.
  */
 @XmlRootElement
+@Embeddable
 public class KeywordList {
 
     /**

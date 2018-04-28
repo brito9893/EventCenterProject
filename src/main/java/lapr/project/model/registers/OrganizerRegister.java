@@ -2,6 +2,9 @@ package lapr.project.model.registers;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -13,6 +16,7 @@ import lapr.project.model.Organizer;
  * Created by Vitor on 03/06/2017.
  */
 @XmlRootElement
+@Entity
 public class OrganizerRegister {
 
     /**
@@ -20,6 +24,7 @@ public class OrganizerRegister {
      */
     @XmlElementWrapper(name = "OrganizerList")
     @XmlElement(name = "Organizer")
+    @OneToMany
     private final List<Organizer> organizerList;
 
     /**
@@ -115,4 +120,14 @@ public class OrganizerRegister {
     }
 
 
+    @Id
+    private String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 }

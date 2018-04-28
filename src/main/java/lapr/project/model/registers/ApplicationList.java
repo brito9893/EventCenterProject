@@ -1,6 +1,9 @@
 package lapr.project.model.registers;
 
 import java.util.*;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -12,6 +15,7 @@ import lapr.project.model.*;
  * Created by vitor on 06/06/2017.
  */
 @XmlRootElement
+@Entity
 public class ApplicationList {
 
     /**
@@ -19,6 +23,7 @@ public class ApplicationList {
      */
     @XmlElementWrapper(name = "Applications")
     @XmlElement(name = "Application")
+    @OneToMany
     private List<Application> listApplication;
 
     /**
@@ -211,4 +216,14 @@ public class ApplicationList {
         return hash;
     }
 
+    @Id
+    private String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 }

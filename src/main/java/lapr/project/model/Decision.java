@@ -8,6 +8,10 @@ package lapr.project.model;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -16,6 +20,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author U
  */
 @XmlRootElement
+@Entity
 public class Decision {
 
     /**
@@ -35,12 +40,14 @@ public class Decision {
      */
     @XmlElementWrapper(name = "ratings")
     @XmlElement(name = "rate")
+    @OneToMany
     private List<Integer> rates;
 
     /**
      * FAE making the decision
      */
     @XmlElement
+    @OneToOne
     private FAE fae;
 
     /**
@@ -162,5 +169,16 @@ public class Decision {
             total++;
         }
         return ((double) sum / ((total == 0) ? (double) 1 : (double) total));
+    }
+
+    @Id
+    private String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

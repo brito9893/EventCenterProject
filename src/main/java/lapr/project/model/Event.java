@@ -7,6 +7,7 @@ package lapr.project.model;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlElement;
 import lapr.project.model.registers.*;
 import lapr.project.utils.Date.Date;
@@ -14,7 +15,13 @@ import lapr.project.utils.Date.Date;
 /**
  * @author Luís Cunha on 02/06/2017
  */
+@Entity
 public class Event {
+    @Id
+    @GeneratedValue
+    private int pk;
+    @Version
+    private int version;
 
     /**
      * Not started String
@@ -54,46 +61,55 @@ public class Event {
      * Event start date
      */
     @XmlElement
+    @Temporal(TemporalType.DATE)
     private Date eventStartDate;
     /**
      * Event end date
      */
     @XmlElement
+    @Temporal(TemporalType.DATE)
     private Date eventEndDate;
     /**
      * Event application submission start date
      */
     @XmlElement
+    @Temporal(TemporalType.DATE)
     private Date eventSubmissionStartDate;
     /**
      * Event application submission end date
      */
     @XmlElement
+    @Temporal(TemporalType.DATE)
     private Date eventSubmissionEndDate;
     /**
      * List ao event support employees
      */
     @XmlElement
+    @Embedded
     private FAEList listFae;
     /**
      * List of the organizers for the event
      */
     @XmlElement
+    @OneToOne
     private OrganizerRegister listOrganizer;
     /**
      * List of applications to the event
      */
     @XmlElement
+    @OneToOne
     private ApplicationList listApplication;
     /**
      * List of attributions to the event
      */
     @XmlElement
+    @OneToOne
     private AttributionList listAttribution;
     /**
      * List of stands of the event
      */
     @XmlElement
+    @OneToOne
     private StandList standList;
     /**
      * State of the event: Started, Not Started, Started submissions, Ended submissions

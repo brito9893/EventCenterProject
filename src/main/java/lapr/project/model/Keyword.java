@@ -1,5 +1,7 @@
 package lapr.project.model;
 
+import javax.persistence.Embeddable;
+import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -10,12 +12,14 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author by Nuno Bettencourt [nmb@isep.ipp.pt] on 29/05/16.
  */
 @XmlRootElement
+@Embeddable
 public class Keyword {
 
     /**
      * Keyword representation.
      */
     @XmlElement
+    @Id
     private String value = "";
 
     /**
@@ -40,6 +44,10 @@ public class Keyword {
      */
     private String getValue() {
         return this.value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
     }
 
     /**

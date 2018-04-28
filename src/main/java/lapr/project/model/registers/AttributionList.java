@@ -2,6 +2,9 @@ package lapr.project.model.registers;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -12,6 +15,7 @@ import lapr.project.model.FAE;
  * Created by Mário Vaz on 06-Jun-17.
  */
 @XmlRootElement
+@Entity
 public class AttributionList {
 
     /**
@@ -19,6 +23,7 @@ public class AttributionList {
      */
     @XmlElementWrapper(name = "Attributions")
     @XmlElement(name = "Attribution")
+    @OneToMany
     private final List<Attribution> attributionRegister;
 
     /**
@@ -117,4 +122,14 @@ public class AttributionList {
     }
 
 
+    @Id
+    private String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 }

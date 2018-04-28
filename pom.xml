@@ -173,7 +173,7 @@
                 <configuration>
                     <!-- same configuration as in the regular test execution goal -->
                     <!-- plus argLine parameter configured by JaCoCo prepare-agent -->
-                    <argLine>${argLine} -XX:-UseSplitVerifier</argLine>
+                    <!--<argLine>${argLine} -XX:-UseSplitVerifier</argLine>-->
                     <includes>
                         <include>**/*Test.java</include>
                         <include>**/*Tests.java</include>
@@ -199,10 +199,10 @@
                 <version>1.2.0</version>
                 <configuration>
                     <!--<timestampedReports>false</timestampedReports>-->
-                    <inScopeClasses>
-                        <param>lapr.project.model.*</param>
-                        <param>lapr.project.utils.*</param>
-                    </inScopeClasses>
+                    <!--<inScopeClasses>-->
+                    <!--<param>lapr.project.model.*</param>-->
+                    <!--<param>lapr.project.utils.*</param>-->
+                    <!--</inScopeClasses>-->
                     <targetClasses>
                         <param>lapr.project.model.*</param>
                         <param>lapr.project.utils.*</param>

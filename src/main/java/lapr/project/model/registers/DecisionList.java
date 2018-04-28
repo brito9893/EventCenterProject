@@ -2,6 +2,7 @@ package lapr.project.model.registers;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -13,19 +14,31 @@ import lapr.project.model.FAE;
  * Created by Mário Vaz on 06-Jun-17.
  */
 @XmlRootElement
+@Entity
 public class DecisionList {
-
+    @Id
+    @GeneratedValue
+    private String id;
     /**
      * ArrayList that contains Application Decisions.
      */
     @XmlElementWrapper(name = "Decisions")
     @XmlElement(name = "Decision")
+    @OneToMany
     private List<Decision> decisions;
-
     /**
      * Application parent
      */
+    @OneToOne
     private Application application;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     /**
      * DecisionList Class Constructor

@@ -7,6 +7,9 @@ package lapr.project.model.registers;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -17,6 +20,7 @@ import lapr.project.model.User;
  * @author U
  */
 @XmlRootElement
+@Entity
 public class EventManagerRegister {
 
 
@@ -25,6 +29,7 @@ public class EventManagerRegister {
      */
     @XmlElementWrapper(name = "EventManagers")
     @XmlElement(name = "EventManager")
+    @OneToMany
     private final List<EventManager> eventManagerList;
 
 
@@ -79,13 +84,29 @@ public class EventManagerRegister {
         return eventManagerList;
     }
 
+    @Id
+    private String id;
+
+    /**
+     * Return hashCode.
+     *
+     * @return hashCode.
+     */
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        for (EventManager a : eventManagerList) {
+            hash = 23 * hash + (a == null ? 0 : a.hashCode());
+        }
+        return hash;
+    }
+
     /**
      * Obtains User by his name.
      *
-     * @param name user's name.
+     * @param obj user's name.
      * @return user with the given name.
      */
-
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -110,19 +131,11 @@ public class EventManagerRegister {
         return true;
     }
 
-    /**
-     * Return hashCode.
-     *
-     * @return hashCode.
-     */
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        for (EventManager a : eventManagerList) {
-            hash = 23 * hash + (a == null ? 0 : a.hashCode());
-        }
-        return hash;
+    public String getId() {
+        return id;
     }
 
-
+    public void setId(String id) {
+        this.id = id;
+    }
 }

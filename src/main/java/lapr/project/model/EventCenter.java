@@ -6,6 +6,10 @@
 package lapr.project.model;
 
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
@@ -18,30 +22,35 @@ import lapr.project.model.registers.UserRegister;
  * @author U
  */
 @XmlRootElement
+@Entity
 public class EventCenter {
 
     /**
      * Event Register.
      */
     @XmlElement
+    @OneToOne
     private EventRegister registerEvent;
 
     /**
      * Unconfirmed Register.
      */
     @XmlElement
+    @OneToOne
     private UserNotConfirmedRegister userNotConfirmed;
 
     /**
      * User Not Confirmed Register.
      */
     @XmlElement
+    @OneToOne
     private UserRegister users;
 
     /**
      * Event Manager Register
      */
     @XmlElement
+    @OneToOne
     private EventManagerRegister managers;
 
     /**
@@ -226,5 +235,17 @@ public class EventCenter {
         result = 31 * result + users.hashCode();
         result = 31 * result + managers.hashCode();
         return result;
+    }
+
+    @Id
+    @GeneratedValue
+    private String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

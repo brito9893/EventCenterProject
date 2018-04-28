@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 public class DecisionListTest {
 
     /**
-     * Test of getSize method, of class DecisionList.
+     * Test of size method, of class DecisionList.
      */
     @Test
     public void testGetSize() {

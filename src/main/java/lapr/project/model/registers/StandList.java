@@ -3,6 +3,9 @@ package lapr.project.model.registers;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -12,6 +15,7 @@ import lapr.project.model.Stand;
  * Created by Mário Vaz on 05-Jun-17.
  */
 @XmlRootElement
+@Entity
 public class StandList {
 
     /**
@@ -19,7 +23,9 @@ public class StandList {
      */
     @XmlElementWrapper(name = "Stands")
     @XmlElement(name = "Stand")
+    @OneToMany
     private final ArrayList<Stand> standsList;
+    @Id
     private int standsID = 0;
 
     /**

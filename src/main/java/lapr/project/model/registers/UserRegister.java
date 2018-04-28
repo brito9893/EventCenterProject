@@ -2,6 +2,9 @@ package lapr.project.model.registers;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -13,6 +16,7 @@ import lapr.project.model.User;
  * @author lilyl
  */
 @XmlRootElement
+@Entity
 public class UserRegister {
 
     /**
@@ -20,6 +24,7 @@ public class UserRegister {
      */
     @XmlElementWrapper(name = "ConfirmedUsers")
     @XmlElement(name = "User")
+    @OneToMany
     private final List<User> usersList;
 
     /**
@@ -167,4 +172,14 @@ public class UserRegister {
     }
 
 
+    @Id
+    private String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 }

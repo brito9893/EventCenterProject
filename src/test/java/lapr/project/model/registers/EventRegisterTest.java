@@ -15,7 +15,7 @@ import static org.junit.Assert.*;
 public class EventRegisterTest {
 
     /**
-     * Test of getSize method, of class EventRegister.
+     * Test of size method, of class EventRegister.
      */
     @Test
     public void testGetSize() {

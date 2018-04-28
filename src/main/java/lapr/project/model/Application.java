@@ -1,6 +1,7 @@
 package lapr.project.model;
 
 import java.util.Objects;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import lapr.project.model.registers.DecisionList;
@@ -12,7 +13,14 @@ import lapr.project.model.registers.KeywordList;
  * @author by Luis Cunha 08/06/2017
  */
 @XmlRootElement
+@Entity
 public class Application {
+
+    @Id
+    @GeneratedValue
+    private int pk;
+    @Version
+    private int version;
 
     /**
      * Application's company
@@ -24,6 +32,7 @@ public class Application {
      * Keyword list
      */
     @XmlElement
+    @Embedded
     private KeywordList Listkeyword;
 
     /**
@@ -36,18 +45,21 @@ public class Application {
      * Representative for the company
      */
     @XmlElement
+    @OneToOne
     private Representative companyRepresentative;
 
     /**
      * List of decisions on the application
      */
     @XmlElement
+    @OneToOne
     private DecisionList listDecision;
 
     /**
      * Stand assigned
      */
     @XmlElement
+    @OneToOne
     private Stand appStand;
 
     /**
