@@ -32,14 +32,6 @@ public class DecisionList {
     @OneToOne
     private Application application;
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
     /**
      * DecisionList Class Constructor
      */
@@ -53,6 +45,14 @@ public class DecisionList {
      */
     public DecisionList() {
         //xml requirement
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     /**

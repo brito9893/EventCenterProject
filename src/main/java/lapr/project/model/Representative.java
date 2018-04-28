@@ -21,6 +21,9 @@ public class Representative {
     @XmlElement
     @OneToOne
     private User user;
+    @Id
+    @GeneratedValue
+    private String id;
 
     /**
      * Representative class constructor that receives information from an User object
@@ -81,10 +84,6 @@ public class Representative {
         result = 31 * result + user.hashCode();
         return result;
     }
-
-    @Id
-    @GeneratedValue
-    private String id;
 
     public String getId() {
         return id;

@@ -28,6 +28,8 @@ public class Stand {
      */
     @XmlElement
     private String standDescription;
+    @Id
+    private String id;
 
     /**
      * Stand Class Constructor.
@@ -121,9 +123,6 @@ public class Stand {
         result = 31 * result + standDescription.hashCode();
         return result;
     }
-
-    @Id
-    private String id;
 
     public String getId() {
         return id;

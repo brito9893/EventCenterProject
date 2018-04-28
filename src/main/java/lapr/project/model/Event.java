@@ -17,12 +17,6 @@ import lapr.project.utils.Date.Date;
  */
 @Entity
 public class Event {
-    @Id
-    @GeneratedValue
-    private int pk;
-    @Version
-    private int version;
-
     /**
      * Not started String
      */
@@ -47,6 +41,11 @@ public class Event {
      * Deciding submissions String
      */
     public static final String SUBMISSIONS_ON_DECISION = "Deciding submissions";
+    @Id
+    @GeneratedValue
+    private int pk;
+    @Version
+    private int version;
     /**
      * Event name
      */

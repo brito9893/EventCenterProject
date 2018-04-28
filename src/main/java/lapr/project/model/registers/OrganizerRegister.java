@@ -26,6 +26,8 @@ public class OrganizerRegister {
     @XmlElement(name = "Organizer")
     @OneToMany
     private final List<Organizer> organizerList;
+    @Id
+    private String id;
 
     /**
      * OrganizerRegister Class Constructor
@@ -118,10 +120,6 @@ public class OrganizerRegister {
         }
         return hash;
     }
-
-
-    @Id
-    private String id;
 
     public String getId() {
         return id;

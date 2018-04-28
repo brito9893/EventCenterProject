@@ -25,6 +25,8 @@ public class ApplicationList {
     @XmlElement(name = "Application")
     @OneToMany
     private List<Application> listApplication;
+    @Id
+    private String id;
 
     /**
      * Class constructor
@@ -215,9 +217,6 @@ public class ApplicationList {
         }
         return hash;
     }
-
-    @Id
-    private String id;
 
     public String getId() {
         return id;

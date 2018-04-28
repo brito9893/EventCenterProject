@@ -25,6 +25,8 @@ public class AttributionList {
     @XmlElement(name = "Attribution")
     @OneToMany
     private final List<Attribution> attributionRegister;
+    @Id
+    private String id;
 
     /**
      * AttributionList Class Constructor
@@ -120,10 +122,6 @@ public class AttributionList {
         }
         return hash;
     }
-
-
-    @Id
-    private String id;
 
     public String getId() {
         return id;

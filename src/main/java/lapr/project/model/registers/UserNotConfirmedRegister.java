@@ -32,6 +32,8 @@ public class UserNotConfirmedRegister {
     @XmlElement(name = "User")
     @OneToMany
     private final List<User> usersNotConfirmedList;
+    @Id
+    private String id;
 
     /**
      * UserNotConfirmedRegister Class Constructor
@@ -140,9 +142,6 @@ public class UserNotConfirmedRegister {
         }
         return true;
     }
-
-    @Id
-    private String id;
 
     public String getId() {
         return id;

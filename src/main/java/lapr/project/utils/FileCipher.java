@@ -28,6 +28,7 @@ public class FileCipher {
     private static final Logger LOGGER = Logger.getLogger(FileCipher.class.getName());
     @XmlElement
     private String keyword;
+    private String id;
 
     public FileCipher(String keyword) {
         this.keyword = keyword;
@@ -208,8 +209,6 @@ public class FileCipher {
         }
         return new String(decrypted);
     }
-
-    private String id;
 
     @Id
     public String getId() {

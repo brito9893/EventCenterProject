@@ -26,6 +26,8 @@ public class UserRegister {
     @XmlElement(name = "User")
     @OneToMany
     private final List<User> usersList;
+    @Id
+    private String id;
 
     /**
      * Build an instance of UserRegister
@@ -125,7 +127,6 @@ public class UserRegister {
         return user;
     }
 
-
     /**
      * This method compares the equality of the current object with the object
      * of same type.
@@ -170,10 +171,6 @@ public class UserRegister {
         }
         return hash;
     }
-
-
-    @Id
-    private String id;
 
     public String getId() {
         return id;

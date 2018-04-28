@@ -23,6 +23,8 @@ public class Organizer {
     @XmlElement
     @OneToOne
     private User user;
+    @Id
+    private String id;
 
     /**
      * Organizer Constructor with user.
@@ -81,9 +83,6 @@ public class Organizer {
         hash = 31 * hash + Objects.hashCode(this.user);
         return hash;
     }
-
-    @Id
-    private String id;
 
     public String getId() {
         return id;

@@ -19,6 +19,10 @@ import lapr.project.utils.PasswordEncoder;
 @Entity
 public class User implements Serializable {
     private static final long serialVersionUID = -642375789393957775L;
+    /**
+     * User default language
+     */
+    private static Language defaultLanguage = Language.ENGLISH;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private String id;
@@ -28,15 +32,6 @@ public class User implements Serializable {
     @XmlElement(name = "key")
     @OneToOne
     private FileCipher encrypter;
-
-    public String getId() {
-        return id;
-    }
-
-    /**
-     * User default language
-     */
-    private static Language defaultLanguage = Language.ENGLISH;
     /**
      * User's Username.
      */
@@ -62,12 +57,6 @@ public class User implements Serializable {
      */
     @XmlElement
     private Language language;
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-
     /**
      * User Class Constructor with individual parameters.
      *
@@ -109,10 +98,19 @@ public class User implements Serializable {
         this.language = defaultLanguage;
     }
 
+
     /**
      * User Empty Class Constructor
      */
     public User() {
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     /**

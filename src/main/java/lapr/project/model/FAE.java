@@ -22,6 +22,9 @@ public class FAE implements Serializable {
      */
     @XmlElement
     private User user;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
 
     /**
      * FAE empty constructor
@@ -37,10 +40,6 @@ public class FAE implements Serializable {
     public FAE(User user) {
         this.user = user;
     }
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
 
     /**
      * This method compares the equality of the current object with the object of same type.

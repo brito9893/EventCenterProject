@@ -26,6 +26,8 @@ public class EventRegister {
     @XmlElement(name = "Event")
     @OneToMany
     private ArrayList<Event> eventList;
+    @Id
+    private String id;
 
     /**
      * EventRegister Class Constructor.
@@ -157,9 +159,6 @@ public class EventRegister {
     public boolean removeEvent(Event event) {
         return eventList.remove(event);
     }
-
-    @Id
-    private String id;
 
     /**
      * Obtains List of Events.

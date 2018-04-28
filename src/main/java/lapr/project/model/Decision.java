@@ -49,6 +49,8 @@ public class Decision {
     @XmlElement
     @OneToOne
     private FAE fae;
+    @Id
+    private String id;
 
     /**
      * Constructor of Decision class.
@@ -170,9 +172,6 @@ public class Decision {
         }
         return ((double) sum / ((total == 0) ? (double) 1 : (double) total));
     }
-
-    @Id
-    private String id;
 
     public String getId() {
         return id;

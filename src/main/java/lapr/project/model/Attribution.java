@@ -28,6 +28,8 @@ public class Attribution {
     @XmlElement
     @OneToOne
     private Application application;
+    @Id
+    private String id;
 
     /**
      * Constructor of Attribution class.
@@ -98,9 +100,6 @@ public class Attribution {
         final Attribution other = (Attribution) obj;
         return Objects.equals(this.fae, other.fae) && Objects.equals(this.application, other.application);
     }
-
-    @Id
-    private String id;
 
     public String getId() {
         return id;

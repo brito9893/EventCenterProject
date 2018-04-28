@@ -52,6 +52,9 @@ public class EventCenter {
     @XmlElement
     @OneToOne
     private EventManagerRegister managers;
+    @Id
+    @GeneratedValue
+    private String id;
 
     /**
      * Event Center Constructor.
@@ -236,10 +239,6 @@ public class EventCenter {
         result = 31 * result + managers.hashCode();
         return result;
     }
-
-    @Id
-    @GeneratedValue
-    private String id;
 
     public String getId() {
         return id;

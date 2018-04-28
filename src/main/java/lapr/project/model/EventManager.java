@@ -25,6 +25,8 @@ public class EventManager {
     @XmlElement
     @OneToOne
     private User user;
+    @Id
+    private String id;
 
     /**
      * Class constructor
@@ -83,9 +85,6 @@ public class EventManager {
         hash = 37 * hash + Objects.hashCode(this.user);
         return hash;
     }
-
-    @Id
-    private String id;
 
     public String getId() {
         return id;

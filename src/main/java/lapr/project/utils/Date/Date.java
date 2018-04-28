@@ -109,6 +109,10 @@ public class Date implements Comparable<Date> {
         return year;
     }
 
+    public void setYear(int year) {
+        this.year = year;
+    }
+
     /**
      * Returns date's month.
      *
@@ -118,6 +122,10 @@ public class Date implements Comparable<Date> {
         return month.ordinal() + 1;
     }
 
+    public void setMonth(Month month) {
+        this.month = month;
+    }
+
     /**
      * Returns the date's day.
      *
@@ -125,14 +133,6 @@ public class Date implements Comparable<Date> {
      */
     public int getDay() {
         return day;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
-    }
-
-    public void setMonth(Month month) {
-        this.month = month;
     }
 
     public void setDay(int day) {

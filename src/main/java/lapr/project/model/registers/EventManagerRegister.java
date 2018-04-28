@@ -31,7 +31,8 @@ public class EventManagerRegister {
     @XmlElement(name = "EventManager")
     @OneToMany
     private final List<EventManager> eventManagerList;
-
+    @Id
+    private String id;
 
     /**
      * Build an instance of UserRegister
@@ -74,7 +75,6 @@ public class EventManagerRegister {
         return eventManagerList.remove(user);
     }
 
-
     /**
      * returns the eventManagerList
      *
@@ -83,9 +83,6 @@ public class EventManagerRegister {
     public List<EventManager> getUsersList() {
         return eventManagerList;
     }
-
-    @Id
-    private String id;
 
     /**
      * Return hashCode.
